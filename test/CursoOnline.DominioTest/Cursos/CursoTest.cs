@@ -2,6 +2,7 @@ using System;
 using CursoOnline.DominioTest._Util;
 using ExpectedObjects;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace CursoOnline.DominioTest.Cursos
 {
@@ -11,6 +12,72 @@ namespace CursoOnline.DominioTest.Cursos
     // - Criar um curso com nome, carga horária, público alvo e valor do curso
     // - As opções para público alvo são: Estudante, Universiário, Empregado e Empregador
     // - Todos os campos do curso são obrigatórios
+
+    public class CursoTest : IDisposable
+    {
+        private readonly ITestOutputHelper _output;
+        private  readonly string _nome;
+        private readonly double _cargaHoraria;
+        private readonly ECursoPublicoAlvo _publicoAlvo;
+        private readonly double _valor;
+
+        public CursoTest(ITestOutputHelper output)
+        {
+            _output = output;
+            _output.WriteLine("Construtor sendo executado");
+
+            _nome = "C# Completo";
+            _cargaHoraria = 80;
+            _publicoAlvo = ECursoPublicoAlvo.Estudante;
+            _valor = 950.0;
+        }
+
+        public void Dispose()
+        {
+            _output.WriteLine("Dispose sendo executado");
+        }
+
+        [Fact]
+        public void Deve_criar_curso()
+        {
+            var cursoEsperado = new {
+                Nome = _nome,
+                CargaHoraria = _cargaHoraria,
+                PublicoAlvo = _publicoAlvo,
+                Valor = _valor
+            };
+
+            var curso = new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor);
+
+            cursoEsperado.ToExpectedObject().ShouldMatch(curso);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void Nao_deve_curso_ter_nome_invalido(string nomeInvalido)
+        {
+            Assert.Throws<ArgumentException>(() => new Curso(nomeInvalido, _cargaHoraria, _publicoAlvo, _valor)).ComMensagem("Nome inválido");
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-2)]
+        [InlineData(-100)]
+        public void Nao_deve_curso_ter_carga_horaria_menor_que_1(double cargaHorariaInvalida)
+        {
+            Assert.Throws<ArgumentException>(() => new Curso(_nome, cargaHorariaInvalida, _publicoAlvo, _valor)).ComMensagem("Carga horária inválida");
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        [InlineData(-100)]
+        public void Nao_deve_curso_ter_valor_menor_que_1(double valorInvalido)
+        {
+            Assert.Throws<ArgumentException>(() => new Curso(_nome, _cargaHoraria, _publicoAlvo, valorInvalido)).ComMensagem("Valor inválido");
+        }
+    }
 
     public class Curso
     {
@@ -43,76 +110,5 @@ namespace CursoOnline.DominioTest.Cursos
         Universitário,
         Empregado,
         Empreendedor
-    }
-
-    public class CursoTest
-    {
-        [Fact]
-        public void Deve_criar_curso()
-        {
-            var cursoEsperado = new {
-                Nome = "C# Completo",
-                CargaHoraria = (double)80,
-                PublicoAlvo = ECursoPublicoAlvo.Estudante,
-                Valor = (double)500.0
-            };
-
-            var curso = new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor);
-
-            cursoEsperado.ToExpectedObject().ShouldMatch(curso);
-        }
-
-        [Theory]
-        [InlineData("")]
-        [InlineData(null)]
-        public void Nao_deve_curso_ter_nome_invalido(string nomeInvalido)
-        {
-            var cursoEsperado = new {
-                Nome = "C# Completo",
-                CargaHoraria = (double)100,
-                PublicoAlvo = ECursoPublicoAlvo.Universitário,
-                Valor = (double)700.0
-            };
-
-            Assert.Throws<ArgumentException>(
-                                        () => new Curso(nomeInvalido, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)
-                                    ).ComMensagem("Nome inválido");
-        }
-
-        [Theory]
-        [InlineData(0)]
-        [InlineData(-2)]
-        [InlineData(-100)]
-        public void Nao_deve_curso_ter_carga_horaria_menor_que_1(double cargaHorariaInvalida)
-        {
-            var cursoEsperado = new {
-                Nome = "C# Completo",
-                CargaHoraria = (double)60,
-                PublicoAlvo = ECursoPublicoAlvo.Empregado,
-                Valor = (double)350.0
-            };
-
-            Assert.Throws<ArgumentException>(
-                                        () => new Curso(cursoEsperado.Nome, cargaHorariaInvalida, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)
-                                    ).ComMensagem("Carga horária inválida");
-        }
-
-        [Theory]
-        [InlineData(0)]
-        [InlineData(-1)]
-        [InlineData(-100)]
-        public void Nao_deve_curso_ter_valor_menor_que_1(double valorInvalido)
-        {
-            var cursoEsperado = new {
-                Nome = "ASP.NET Core Completo",
-                CargaHoraria = (double)50,
-                PublicoAlvo = ECursoPublicoAlvo.Estudante,
-                Valor = (double)3000.0
-            };
-
-            Assert.Throws<ArgumentException>(
-                                        () => new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, valorInvalido)
-                                    ).ComMensagem("Valor inválido");
-        }
     }
 }
