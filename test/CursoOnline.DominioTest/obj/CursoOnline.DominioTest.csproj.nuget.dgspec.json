@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {}
+    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
         "projectName": "CursoOnline.Dominio",
-        "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+        "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
         "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {
+    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
+        "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
         "projectName": "CursoOnline.DominioTest",
-        "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
+        "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
         "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\obj\\",
+        "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
-                "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
+              "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
               }
             }
           }

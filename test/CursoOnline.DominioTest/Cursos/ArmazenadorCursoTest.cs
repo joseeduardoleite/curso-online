@@ -1,7 +1,9 @@
 using System;
 using Bogus;
 using CursoOnline.Dominio.Cursos;
-using CursoOnline.Dominio.Cursos.Enums;
+using CursoOnline.Dominio.Cursos.DTO;
+using CursoOnline.Dominio.Cursos.Services;
+using CursoOnline.DominioTest._Builders;
 using CursoOnline.DominioTest._Util;
 using Moq;
 using Xunit;
@@ -38,48 +40,21 @@ namespace CursoOnline.DominioTest.Cursos
         }
 
         [Fact]
-        public void Nao_deve_informar_publico_alvo_inalido()
+        public void Nao_deve_informar_publico_alvo_invalido()
         {
             var publicoAlvoInvalido = "Médico";
             _cursoDto.PublicoAlvo = publicoAlvoInvalido;
 
             Assert.Throws<ArgumentException>(() => _armazenadorCurso.Armazenar(_cursoDto)).ComMensagem("Público Alvo inválido");
         }
-    }
 
-    public interface ICursoRepository
-    {
-        public void Adicionar(Curso curso);
-    }
-
-    public class ArmazenadorCurso
-    {
-        private readonly ICursoRepository _cursoRepository;
-
-        public ArmazenadorCurso(ICursoRepository cursoRepository)
+        [Fact]
+        public void Nao_deve_adicionar_curso_com_mesmo_nome_de_outro_ja_salvo()
         {
-            _cursoRepository = cursoRepository;
+            var cursoJaSalvo = CursoBuilder.Novo().ComNome(_cursoDto.Nome).Build();
+            _cursoRepositoryMock.Setup(x => x.ObterPeloNome(_cursoDto.Nome)).Returns(cursoJaSalvo);
+
+            Assert.Throws<ArgumentException>(() => _armazenadorCurso.Armazenar(_cursoDto)).ComMensagem("Nome do curso já consta no banco de dados");
         }
-
-        public void Armazenar(CursoDto cursoDto)
-        {
-            Enum.TryParse(typeof(ECursoPublicoAlvo), cursoDto.PublicoAlvo, out var publicoAlvo);
-
-            if (publicoAlvo == null)
-                throw new ArgumentException("Público Alvo inválido");
-
-            var curso = new Curso(cursoDto.Nome, cursoDto.CargaHoraria, (ECursoPublicoAlvo)publicoAlvo, cursoDto.Valor, cursoDto.Descricao);
-
-            _cursoRepository.Adicionar(curso);
-        }
-    }
-
-    public class CursoDto
-    {
-        public string Nome { get; set; }
-        public double CargaHoraria { get; set; }
-        public string PublicoAlvo { get; set; }
-        public double Valor { get; set; }
-        public string Descricao { get; set; }
-    }
+    }    
 }
