@@ -1,4 +1,5 @@
 using System;
+using CursoOnline.DominioTest._Builders;
 using CursoOnline.DominioTest._Util;
 using ExpectedObjects;
 using Xunit;
@@ -12,6 +13,7 @@ namespace CursoOnline.DominioTest.Cursos
     // - Criar um curso com nome, carga horária, público alvo e valor do curso
     // - As opções para público alvo são: Estudante, Universiário, Empregado e Empregador
     // - Todos os campos do curso são obrigatórios
+    // - Curso deve ter uma descrição (não obrigatório)
 
     public class CursoTest : IDisposable
     {
@@ -20,6 +22,7 @@ namespace CursoOnline.DominioTest.Cursos
         private readonly double _cargaHoraria;
         private readonly ECursoPublicoAlvo _publicoAlvo;
         private readonly double _valor;
+        private readonly string _descricao;
 
         public CursoTest(ITestOutputHelper output)
         {
@@ -30,6 +33,7 @@ namespace CursoOnline.DominioTest.Cursos
             _cargaHoraria = 80;
             _publicoAlvo = ECursoPublicoAlvo.Estudante;
             _valor = 950.0;
+            _descricao = "Descrição";
         }
 
         public void Dispose()
@@ -44,10 +48,11 @@ namespace CursoOnline.DominioTest.Cursos
                 Nome = _nome,
                 CargaHoraria = _cargaHoraria,
                 PublicoAlvo = _publicoAlvo,
-                Valor = _valor
+                Valor = _valor,
+                Descricao = _descricao
             };
 
-            var curso = new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor);
+            var curso = new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor, cursoEsperado.Descricao);
 
             cursoEsperado.ToExpectedObject().ShouldMatch(curso);
         }
@@ -57,7 +62,7 @@ namespace CursoOnline.DominioTest.Cursos
         [InlineData(null)]
         public void Nao_deve_curso_ter_nome_invalido(string nomeInvalido)
         {
-            Assert.Throws<ArgumentException>(() => new Curso(nomeInvalido, _cargaHoraria, _publicoAlvo, _valor)).ComMensagem("Nome inválido");
+            Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComNome(nomeInvalido).Build()).ComMensagem("Nome inválido");
         }
 
         [Theory]
@@ -66,7 +71,7 @@ namespace CursoOnline.DominioTest.Cursos
         [InlineData(-100)]
         public void Nao_deve_curso_ter_carga_horaria_menor_que_1(double cargaHorariaInvalida)
         {
-            Assert.Throws<ArgumentException>(() => new Curso(_nome, cargaHorariaInvalida, _publicoAlvo, _valor)).ComMensagem("Carga horária inválida");
+            Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComCargaHoraria(cargaHorariaInvalida).Build()).ComMensagem("Carga horária inválida");
         }
 
         [Theory]
@@ -75,7 +80,7 @@ namespace CursoOnline.DominioTest.Cursos
         [InlineData(-100)]
         public void Nao_deve_curso_ter_valor_menor_que_1(double valorInvalido)
         {
-            Assert.Throws<ArgumentException>(() => new Curso(_nome, _cargaHoraria, _publicoAlvo, valorInvalido)).ComMensagem("Valor inválido");
+            Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComValor(valorInvalido).Build()).ComMensagem("Valor inválido");
         }
     }
 
@@ -85,8 +90,9 @@ namespace CursoOnline.DominioTest.Cursos
         public double CargaHoraria { get; set; }
         public ECursoPublicoAlvo PublicoAlvo { get; set; }
         public double Valor { get; set; }
+        public string Descricao { get; set; }
 
-        public Curso(string nome, double cargaHoraria, ECursoPublicoAlvo publicoAlvo, double valor)
+        public Curso(string nome, double cargaHoraria, ECursoPublicoAlvo publicoAlvo, double valor, string descricao)
         {
             if (String.IsNullOrEmpty(nome))
                 throw new ArgumentException("Nome inválido");
@@ -101,6 +107,7 @@ namespace CursoOnline.DominioTest.Cursos
             CargaHoraria = cargaHoraria;
             PublicoAlvo = publicoAlvo;
             Valor = valor;
+            Descricao = descricao;
         }
     }
 
