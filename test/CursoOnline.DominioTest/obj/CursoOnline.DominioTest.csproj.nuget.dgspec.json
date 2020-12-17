@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {}
+    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+        "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
         "projectName": "CursoOnline.Dominio",
-        "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+        "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
         "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\obj\\",
+        "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {
+    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
+        "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
         "projectName": "CursoOnline.DominioTest",
-        "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
+        "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\CursoOnline.DominioTest.csproj",
         "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\obj\\",
+        "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\test\\CursoOnline.DominioTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
-                "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
+              "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+                "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
               }
             }
           }
@@ -104,6 +104,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.8.2, )"
             },
             "coverlet.collector": {
               "target": "Package",
