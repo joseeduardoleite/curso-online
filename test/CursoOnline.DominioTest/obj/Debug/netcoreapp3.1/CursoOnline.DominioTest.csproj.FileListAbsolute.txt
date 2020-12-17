@@ -96,3 +96,5 @@ C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\test\CursoOnlin
 C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\test\CursoOnline.DominioTest\obj\Debug\netcoreapp3.1\CursoOnline.DominioTest.genruntimeconfig.cache
 C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\test\CursoOnline.DominioTest\bin\Debug\netcoreapp3.1\ExpectedObjects.dll
 c:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\test\CursoOnline.DominioTest\bin\Debug\netcoreapp3.1\Bogus.dll
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\test\CursoOnline.DominioTest\bin\Debug\netcoreapp3.1\CursoOnline.Dominio.dll
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\test\CursoOnline.DominioTest\bin\Debug\netcoreapp3.1\CursoOnline.Dominio.pdb

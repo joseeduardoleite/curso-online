@@ -1,5 +1,7 @@
 using System;
 using Bogus;
+using CursoOnline.Dominio.Cursos;
+using CursoOnline.Dominio.Cursos.Enums;
 using CursoOnline.DominioTest._Builders;
 using CursoOnline.DominioTest._Util;
 using ExpectedObjects;
@@ -8,14 +10,6 @@ using Xunit.Abstractions;
 
 namespace CursoOnline.DominioTest.Cursos
 {
-    // "Eu, enquanto administrador, quero criar e ditar cursos para que sejam abertas matriculas para o mesmo."
-
-    // Critérios de aceite
-    // - Criar um curso com nome, carga horária, público alvo e valor do curso
-    // - As opções para público alvo são: Estudante, Universiário, Empregado e Empregador
-    // - Todos os campos do curso são obrigatórios
-    // - Curso deve ter uma descrição (não obrigatório)
-
     public class CursoTest : IDisposable
     {
         private readonly ITestOutputHelper _output;
@@ -84,40 +78,5 @@ namespace CursoOnline.DominioTest.Cursos
         {
             Assert.Throws<ArgumentException>(() => CursoBuilder.Novo().ComValor(valorInvalido).Build()).ComMensagem("Valor inválido");
         }
-    }
-
-    public class Curso
-    {
-        public string Nome { get; set; }
-        public double CargaHoraria { get; set; }
-        public ECursoPublicoAlvo PublicoAlvo { get; set; }
-        public double Valor { get; set; }
-        public string Descricao { get; set; }
-
-        public Curso(string nome, double cargaHoraria, ECursoPublicoAlvo publicoAlvo, double valor, string descricao)
-        {
-            if (String.IsNullOrEmpty(nome))
-                throw new ArgumentException("Nome inválido");
-            
-            if (cargaHoraria < 1)
-                throw new ArgumentException("Carga horária inválida");
-
-            if (valor < 1)
-                throw new ArgumentException("Valor inválido");
-            
-            Nome = nome;
-            CargaHoraria = cargaHoraria;
-            PublicoAlvo = publicoAlvo;
-            Valor = valor;
-            Descricao = descricao;
-        }
-    }
-
-    public enum ECursoPublicoAlvo
-    {
-        Estudante,
-        Universitário,
-        Empregado,
-        Empreendedor
     }
 }
