@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ScO5hW44VE/XQQCbqidlC9Vd+Hp8zYfexQoKnVA7sOa62VwA0L8uLkMECa5+Dc1gDrB8ZFTc9EKEEYY6P6VjDQ==",
+  "dgSpecHash": "Ibx/xKCfSgPf8cJ/Fb/tNbHYY4Xgd1Z8bhzB1EzxAnDcHfrwmdsY9hp5t4om5kWGXou0ywoR7FUKul6DqeZ9lw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jocm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\jocm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
