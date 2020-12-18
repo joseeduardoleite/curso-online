@@ -37,3 +37,5 @@ C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Web
 C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Web\obj\Debug\netcoreapp3.1\CursoOnline.Web.csproj.CopyComplete
 C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Web\bin\Debug\netcoreapp3.1\CursoOnline.Dominio.dll
 C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Web\bin\Debug\netcoreapp3.1\CursoOnline.Dominio.pdb
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Web\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Index.cshtml.g.cs
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Web\obj\Debug\netcoreapp3.1\Razor\Views\Curso\NovoOuEditar.cshtml.g.cs

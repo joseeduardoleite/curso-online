@@ -1,9 +1,10 @@
 using System;
+using CursoOnline.Dominio._Base;
 using CursoOnline.Dominio.Cursos.Enums;
 
 namespace CursoOnline.Dominio.Cursos
 {
-    public class Curso
+    public class Curso : Entidade
     {
         public string Nome { get; private set; }
         public double CargaHoraria { get; private set; }
