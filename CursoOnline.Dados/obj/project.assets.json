@@ -1364,11 +1364,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dados\\CursoOnline.Dados.csproj",
+      "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dados\\CursoOnline.Dados.csproj",
       "projectName": "CursoOnline.Dados",
-      "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dados\\CursoOnline.Dados.csproj",
+      "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dados\\CursoOnline.Dados.csproj",
       "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dados\\obj\\",
+      "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dados\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1382,8 +1382,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
-              "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
+            "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+              "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
             }
           }
         }
