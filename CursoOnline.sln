@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoOnline.Dados", "CursoO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoOnline.Web", "CursoOnline.Web\CursoOnline.Web.csproj", "{C4B7B7A3-A96B-48CB-9D40-6A199E63D120}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoOnline.Ioc", "CursoOnline.Ioc\CursoOnline.Ioc.csproj", "{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{C4B7B7A3-A96B-48CB-9D40-6A199E63D120}.Release|x64.Build.0 = Release|Any CPU
 		{C4B7B7A3-A96B-48CB-9D40-6A199E63D120}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4B7B7A3-A96B-48CB-9D40-6A199E63D120}.Release|x86.Build.0 = Release|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Debug|x64.Build.0 = Debug|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Release|x64.ActiveCfg = Release|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Release|x64.Build.0 = Release|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA9264F2-D3F7-4488-8D83-DECE9D1B7B04}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
