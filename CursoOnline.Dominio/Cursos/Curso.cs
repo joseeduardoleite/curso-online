@@ -12,6 +12,8 @@ namespace CursoOnline.Dominio.Cursos
         public double Valor { get; private set; }
         public string Descricao { get; private set; }
 
+        private Curso() { }
+
         public Curso(string nome, double cargaHoraria, ECursoPublicoAlvo publicoAlvo, double valor, string descricao)
         {
             if (String.IsNullOrEmpty(nome))

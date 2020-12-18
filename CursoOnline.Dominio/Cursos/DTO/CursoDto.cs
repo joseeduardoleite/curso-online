@@ -2,8 +2,9 @@ using CursoOnline.Dominio._Base;
 
 namespace CursoOnline.Dominio.Cursos.DTO
 {
-    public class CursoDto : Entidade
+    public class CursoDto
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
         public double CargaHoraria { get; set; }
         public string PublicoAlvo { get; set; }

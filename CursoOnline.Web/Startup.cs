@@ -23,7 +23,9 @@ namespace CursoOnline.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(x => {
+                x.Filters.Add(typeof(CustomExceptionFilter));
+            });
             
             services.AddDbContext<ApplicationDbContext>(x => x.UseMySql(Configuration.GetConnectionString("ConnectionString")));
 
@@ -45,15 +47,17 @@ namespace CursoOnline.Web
                 await unitOfWork.Commit();
             });
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
+            // if (env.IsDevelopment())
+            // {
+            //     app.UseDeveloperExceptionPage();
+            // }
+            // else
+            // {
+            //     app.UseExceptionHandler("/Home/Error");
+            //     app.UseHsts();
+            // }
+            app.UseDeveloperExceptionPage();
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
