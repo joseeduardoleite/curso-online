@@ -1,0 +1,9 @@
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\bin\Debug\netstandard2.0\CursoOnline.Dados.deps.json
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\bin\Debug\netstandard2.0\CursoOnline.Dados.dll
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\bin\Debug\netstandard2.0\CursoOnline.Dados.pdb
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\obj\Debug\netstandard2.0\CursoOnline.Dados.csprojAssemblyReference.cache
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\obj\Debug\netstandard2.0\CursoOnline.Dados.AssemblyInfoInputs.cache
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\obj\Debug\netstandard2.0\CursoOnline.Dados.AssemblyInfo.cs
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\obj\Debug\netstandard2.0\CursoOnline.Dados.csproj.CoreCompileInputs.cache
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\obj\Debug\netstandard2.0\CursoOnline.Dados.dll
+C:\Users\jocm\My Private Documents\codes\Estudo TDD\Curso Online\CursoOnline.Dados\obj\Debug\netstandard2.0\CursoOnline.Dados.pdb
