@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CursoOnline.Dados\CursoOnline.Dados.csproj" />
+    <ProjectReference Include="..\CursoOnline.Dominio\CursoOnline.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
