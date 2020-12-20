@@ -21,13 +21,21 @@ namespace CursoOnline.Dominio.Cursos
             var cursoJaSalvo = _cursoRepository.ObterPeloNome(cursoDto.Nome);
 
             ValidadorRegra.Novo()
-                          .Quando(cursoJaSalvo != null, "Nome do curso já consta no banco de dados")
-                          .Quando(!Enum.TryParse<ECursoPublicoAlvo>(cursoDto.PublicoAlvo, out var publicoAlvo), "Público Alvo inválido")
+                          .Quando(cursoJaSalvo != null, Resource.NomeCursoJaExiste)
+                          .Quando(!Enum.TryParse<ECursoPublicoAlvo>(cursoDto.PublicoAlvo, out var publicoAlvo), Resource.PublicoAlvoInvalido)
                           .DispararException();
 
             var curso = new Curso(cursoDto.Nome, cursoDto.CargaHoraria, publicoAlvo, cursoDto.Valor, cursoDto.Descricao);
 
-            _cursoRepository.Adicionar(curso);
+            if (cursoDto.Id > 0) {
+                curso = _cursoRepository.ObterPorId(cursoDto.Id);
+                curso.AlterarNome(cursoDto.Nome);
+                curso.AlterarValor(cursoDto.Valor);
+                curso.AlterarCargaHoraria(cursoDto.CargaHoraria);
+            }
+
+            if (cursoDto.Id == 0)
+                _cursoRepository.Adicionar(curso);
         }
     }
 }
