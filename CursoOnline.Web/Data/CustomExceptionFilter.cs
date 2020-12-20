@@ -1,4 +1,5 @@
 using System;
+using CursoOnline.Dominio._Base;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -12,9 +13,9 @@ namespace CursoOnline.Web.Data
 
             if (isAjaxCall) {
                 context.HttpContext.Response.ContentType = "application/json";
+                context.HttpContext.Response.StatusCode = context.Exception is ExcecaoDominio ? 502 : 500;
                 context.HttpContext.Response.StatusCode = 500;
-                var message = context.Exception is ArgumentException ? context.Exception.Message : "An error ocorred";
-                context.Result = new JsonResult(message);
+                context.Result = context.Exception is ExcecaoDominio dominio ? new JsonResult(dominio.MensagensErro) : new JsonResult("An error ocurred");
                 context.ExceptionHandled = true;
             }
 

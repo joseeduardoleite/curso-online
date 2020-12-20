@@ -1,6 +1,7 @@
 using System;
 using Bogus;
 using CursoOnline.Dominio.Cursos;
+using CursoOnline.Dominio._Base;
 using CursoOnline.Dominio.Cursos.DTO;
 using CursoOnline.Dominio.Cursos.Services;
 using CursoOnline.DominioTest._Builders;
@@ -45,7 +46,7 @@ namespace CursoOnline.DominioTest.Cursos
             var publicoAlvoInvalido = "Médico";
             _cursoDto.PublicoAlvo = publicoAlvoInvalido;
 
-            Assert.Throws<ArgumentException>(() => _armazenadorCurso.Armazenar(_cursoDto)).ComMensagem("Público Alvo inválido");
+            Assert.Throws<ExcecaoDominio>(() => _armazenadorCurso.Armazenar(_cursoDto)).ComMensagem("Público Alvo inválido");
         }
 
         [Fact]
@@ -54,7 +55,7 @@ namespace CursoOnline.DominioTest.Cursos
             var cursoJaSalvo = CursoBuilder.Novo().ComNome(_cursoDto.Nome).Build();
             _cursoRepositoryMock.Setup(x => x.ObterPeloNome(_cursoDto.Nome)).Returns(cursoJaSalvo);
 
-            Assert.Throws<ArgumentException>(() => _armazenadorCurso.Armazenar(_cursoDto)).ComMensagem("Nome do curso já consta no banco de dados");
+            Assert.Throws<ExcecaoDominio>(() => _armazenadorCurso.Armazenar(_cursoDto)).ComMensagem("Nome do curso já consta no banco de dados");
         }
     }    
 }

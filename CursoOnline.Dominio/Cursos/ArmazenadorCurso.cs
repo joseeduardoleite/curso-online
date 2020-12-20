@@ -1,4 +1,5 @@
 using System;
+using CursoOnline.Dominio._Base;
 using CursoOnline.Dominio.Cursos.DTO;
 using CursoOnline.Dominio.Cursos.Enums;
 using CursoOnline.Dominio.Cursos.Services;
@@ -19,11 +20,10 @@ namespace CursoOnline.Dominio.Cursos
 
             var cursoJaSalvo = _cursoRepository.ObterPeloNome(cursoDto.Nome);
 
-            if (cursoJaSalvo != null)
-                throw new ArgumentException("Nome do curso já consta no banco de dados");
-            
-            if (!Enum.TryParse<ECursoPublicoAlvo>(cursoDto.PublicoAlvo, out var publicoAlvo))
-                throw new ArgumentException("Público Alvo inválido");
+            ValidadorRegra.Novo()
+                          .Quando(cursoJaSalvo != null, "Nome do curso já consta no banco de dados")
+                          .Quando(!Enum.TryParse<ECursoPublicoAlvo>(cursoDto.PublicoAlvo, out var publicoAlvo), "Público Alvo inválido")
+                          .DispararException();
 
             var curso = new Curso(cursoDto.Nome, cursoDto.CargaHoraria, publicoAlvo, cursoDto.Valor, cursoDto.Descricao);
 
