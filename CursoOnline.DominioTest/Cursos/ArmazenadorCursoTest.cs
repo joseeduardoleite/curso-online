@@ -1,4 +1,3 @@
-using System;
 using Bogus;
 using CursoOnline.Dominio.Cursos;
 using CursoOnline.Dominio._Base;
