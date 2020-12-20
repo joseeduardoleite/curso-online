@@ -28,5 +28,26 @@ namespace CursoOnline.Dominio.Cursos
             Valor = valor;
             Descricao = descricao;
         }
+
+        public void AlterarNome(string nome)
+        {
+            ValidadorRegra.Novo().Quando(String.IsNullOrEmpty(nome), "Nome inválido").DispararException();
+
+            Nome = nome;
+        }
+
+        public void AlterarCargaHoraria(double cargaHoraria)
+        {
+            ValidadorRegra.Novo().Quando(cargaHoraria < 1, "Carga horária inválida").DispararException();
+
+            CargaHoraria = cargaHoraria;
+        }
+
+        public void AlterarValor(double valor)
+        {
+            ValidadorRegra.Novo().Quando(valor < 1, "Valor inválido").DispararException();
+
+            Valor = valor;
+        }
     }
 }
