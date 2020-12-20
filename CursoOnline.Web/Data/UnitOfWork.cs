@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using CursoOnline.Dominio._Base;
+using CursoOnline.Dominio._Base.Services;
 
 namespace CursoOnline.Web.Data
 {

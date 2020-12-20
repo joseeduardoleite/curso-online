@@ -1,4 +1,4 @@
-using CursoOnline.Dominio._Base;
+using CursoOnline.Dominio._Base.Services;
 using CursoOnline.Dominio.Cursos;
 using CursoOnline.Dominio.Cursos.Services;
 using CursoOnline.Web.Data;
@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace CursoOnline.Web
 {
@@ -46,16 +45,7 @@ namespace CursoOnline.Web
                 var unitOfWork = (IUnitOfWork)context.RequestServices.GetService(typeof(IUnitOfWork));
                 await unitOfWork.Commit();
             });
-
-            // if (env.IsDevelopment())
-            // {
-            //     app.UseDeveloperExceptionPage();
-            // }
-            // else
-            // {
-            //     app.UseExceptionHandler("/Home/Error");
-            //     app.UseHsts();
-            // }
+            
             app.UseDeveloperExceptionPage();
             
             app.UseHttpsRedirection();

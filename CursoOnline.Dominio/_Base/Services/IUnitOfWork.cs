@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 
-namespace CursoOnline.Dominio._Base
+namespace CursoOnline.Dominio._Base.Services
 {
     public interface IUnitOfWork
     {
-         Task Commit();
+        Task Commit();
     }
 }

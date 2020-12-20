@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using CursoOnline.Dominio._Base;
+using CursoOnline.Dominio._Base.Services;
 using CursoOnline.Web.Data;
 
 namespace CursoOnline.Web.Repositories

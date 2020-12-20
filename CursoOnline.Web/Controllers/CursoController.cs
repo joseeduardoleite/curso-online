@@ -1,6 +1,5 @@
-using System.Collections.Generic;
 using System.Linq;
-using CursoOnline.Dominio._Base;
+using CursoOnline.Dominio._Base.Services;
 using CursoOnline.Dominio.Cursos;
 using CursoOnline.Dominio.Cursos.DTO;
 using CursoOnline.Web.Util;

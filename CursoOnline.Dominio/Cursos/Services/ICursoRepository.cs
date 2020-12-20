@@ -1,4 +1,4 @@
-using CursoOnline.Dominio._Base;
+using CursoOnline.Dominio._Base.Services;
 
 namespace CursoOnline.Dominio.Cursos.Services
 {

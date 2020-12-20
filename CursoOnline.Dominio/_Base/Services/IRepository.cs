@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CursoOnline.Dominio._Base
+namespace CursoOnline.Dominio._Base.Services
 {
     public interface IRepository<TEntidade>
     {
