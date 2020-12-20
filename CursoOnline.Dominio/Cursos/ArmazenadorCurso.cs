@@ -21,7 +21,7 @@ namespace CursoOnline.Dominio.Cursos
             var cursoJaSalvo = _cursoRepository.ObterPeloNome(cursoDto.Nome);
 
             ValidadorRegra.Novo()
-                          .Quando(cursoJaSalvo != null, Resource.NomeCursoJaExiste)
+                          .Quando(cursoJaSalvo != null && cursoJaSalvo.Id != cursoDto.Id, Resource.NomeCursoJaExiste)
                           .Quando(!Enum.TryParse<ECursoPublicoAlvo>(cursoDto.PublicoAlvo, out var publicoAlvo), Resource.PublicoAlvoInvalido)
                           .DispararException();
 
