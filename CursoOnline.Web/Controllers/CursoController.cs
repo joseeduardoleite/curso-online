@@ -51,5 +51,19 @@ namespace CursoOnline.Web.Controllers
 
             return Ok();
         }
+
+        public IActionResult Editar(int id)
+        {
+            var curso = _cursoRepository.ObterPorId(id);
+            var dto = new CursoDto {
+                Id = curso.Id,
+                Nome = curso.Nome,
+                Descricao = curso.Descricao,
+                CargaHoraria = curso.CargaHoraria,
+                Valor = curso.Valor
+            };
+
+            return View ("NovoOuEditar", dto);
+        }
     }
 }

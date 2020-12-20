@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj": {}
+    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
         "projectName": "CursoOnline.Dominio",
-        "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+        "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
         "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj": {
+    "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj",
+        "projectUniqueName": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj",
         "projectName": "CursoOnline.Web",
-        "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj",
+        "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj",
         "packagesPath": "C:\\Users\\jocm\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\obj\\",
+        "outputPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jocm\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
-                "projectPath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
+              "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hbe72qtb00Zp/6jcxcxfatEM0JBxdHx3lxOyCfY5sfOj04CcA+CQ7uxS7muUlmC+qH9Fh1LXyVvQAjyFWQRhWQ==",
+  "dgSpecHash": "uys+JMnUQKSa3xIBNpyz9fG8g9CDOpxj9XJbMDNwBwXFQtxNO/cG2iCfgEimkG4SP2zVwMnnjav1bEvEhOsSYQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj",
+  "projectFilePath": "C:\\Users\\jocm\\My Private Documents\\codes\\Estudo TDD\\Curso Online\\CursoOnline.Web\\CursoOnline.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jocm\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jocm\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
